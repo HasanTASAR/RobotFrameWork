@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-09-22T00:49:27.800477" rpa="false" schemaversion="5">
+<suite id="s1" name="Verify Search Functionality" source="C:\Users\PC\IdeaProjects\RobotFWTutorial\Tests\eBay\Verify_Search_Functionality.robot">
+<test id="s1-t1" name="Verfy basic searh functionality for eBay1" line="15">
+<kw name="Start Page of eBay" owner="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:49:28.680507" level="INFO">Opening browser 'chrome' to base url 'http://www.ebay.com'.</msg>
+<arg>${url.${site}}</arg>
+<arg>${browser.${brwsr}}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-22T00:49:28.678493" elapsed="5.776740"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-22T00:49:34.456748" elapsed="0.139938"/>
+</kw>
+<status status="PASS" start="2024-09-22T00:49:28.676497" elapsed="5.920189"/>
+</kw>
+<kw name="Input Search Text and Click Search" owner="HeaderPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:49:34.600675" level="INFO">Typing text 'mobile' into text field 'id : gh-ac'.</msg>
+<arg>${HomePage_search_box}</arg>
+<arg>${search_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-22T00:49:34.598676" elapsed="0.817931"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:49:35.418605" level="INFO">Clicking button 'css : #gh-btn'.</msg>
+<arg>${HomePage_search_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-22T00:49:35.417606" elapsed="2.371957"/>
+</kw>
+<arg>mobile</arg>
+<status status="PASS" start="2024-09-22T00:49:34.597677" elapsed="3.192884"/>
+</kw>
+<kw name="Verify Search Result" owner="SearchResultsPage">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:49:38.102383" level="INFO">Current page contains text 'results for'.</msg>
+<arg>${page_contain}</arg>
+<arg>${search_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-09-22T00:49:37.793566" elapsed="0.309817"/>
+</kw>
+<arg>mobile</arg>
+<status status="PASS" start="2024-09-22T00:49:37.790561" elapsed="0.313821"/>
+</kw>
+<kw name="Finish Test" owner="CommonFunctionality" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-22T00:49:38.105381" elapsed="3.657189"/>
+</kw>
+<status status="PASS" start="2024-09-22T00:49:38.104382" elapsed="3.659198"/>
+</kw>
+<doc>This test is verifies the basic search</doc>
+<tag>Functional</tag>
+<status status="PASS" start="2024-09-22T00:49:28.674492" elapsed="13.089088"/>
+</test>
+<test id="s1-t2" name="Verfy basic searh functionality for eBay2" line="22">
+<kw name="Start Page of eBay" owner="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:49:41.775597" level="INFO">Opening browser 'chrome' to base url 'http://www.ebay.com'.</msg>
+<arg>${url.${site}}</arg>
+<arg>${browser.${brwsr}}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-22T00:49:41.771602" elapsed="6.898257"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-22T00:49:48.670860" elapsed="0.112932"/>
+</kw>
+<status status="PASS" start="2024-09-22T00:49:41.769596" elapsed="7.014196"/>
+</kw>
+<kw name="Input Search Text and Click Search" owner="HeaderPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:49:48.787791" level="INFO">Typing text 'miniş' into text field 'id : gh-ac'.</msg>
+<arg>${HomePage_search_box}</arg>
+<arg>${search_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-22T00:49:48.786803" elapsed="0.700462"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:49:49.487265" level="INFO">Clicking button 'css : #gh-btn'.</msg>
+<arg>${HomePage_search_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-22T00:49:49.487265" elapsed="6.401179"/>
+</kw>
+<arg>miniş</arg>
+<status status="PASS" start="2024-09-22T00:49:48.784792" elapsed="7.104653"/>
+</kw>
+<kw name="Verify Search Result" owner="SearchResultsPage">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:49:57.520290" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-40.png"&gt;&lt;img src="selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-22T00:49:57.520290" level="FAIL">Invalid log level 'MINIŞ'.</msg>
+<arg>${page_contain}</arg>
+<arg>${search_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2024-09-22T00:49:55.892443" elapsed="1.638405">Invalid log level 'MINIŞ'.</status>
+</kw>
+<arg>miniş</arg>
+<status status="FAIL" start="2024-09-22T00:49:55.890443" elapsed="1.641404">Invalid log level 'MINIŞ'.</status>
+</kw>
+<kw name="Finish Test" owner="CommonFunctionality" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-22T00:49:57.532832" elapsed="2.326560"/>
+</kw>
+<status status="PASS" start="2024-09-22T00:49:57.531847" elapsed="2.328485"/>
+</kw>
+<doc>This test is verifies the basic search</doc>
+<tag>Functional</tag>
+<status status="FAIL" start="2024-09-22T00:49:41.766577" elapsed="18.093755">Invalid log level 'MINIŞ'.</status>
+</test>
+<test id="s1-t3" name="Verify Advanced Search Functionality" line="29">
+<kw name="Start Page of eBay" owner="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:49:59.872300" level="INFO">Opening browser 'chrome' to base url 'http://www.ebay.com'.</msg>
+<arg>${url.${site}}</arg>
+<arg>${browser.${brwsr}}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-22T00:49:59.867307" elapsed="5.215647"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-22T00:50:05.083958" elapsed="0.134678"/>
+</kw>
+<status status="PASS" start="2024-09-22T00:49:59.866309" elapsed="5.353326"/>
+</kw>
+<kw name="Click on Advanced Search Link" owner="HeaderPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-22T00:50:05.223639" level="INFO">Clicking element 'xpath : //*[@id='gh-as-a']'.</msg>
+<arg>${HomePage_advanced_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-22T00:50:05.221642" elapsed="1.691634"/>
+</kw>
+<status status="PASS" start="2024-09-22T00:50:05.220636" elapsed="1.693640"/>
+</kw>
+<kw name="Finish Test" owner="CommonFunctionality" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-22T00:50:06.918281" elapsed="2.308428"/>
+</kw>
+<status status="PASS" start="2024-09-22T00:50:06.916274" elapsed="2.311443"/>
+</kw>
+<doc>This test is verifies the advanced search</doc>
+<tag>Functional</tag>
+<status status="PASS" start="2024-09-22T00:49:59.863302" elapsed="9.364415"/>
+</test>
+<doc>Basic Search Functionality</doc>
+<status status="FAIL" start="2024-09-22T00:49:27.853446" elapsed="41.378270"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="1" skip="0">Functional</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Verify Search Functionality">Verify Search Functionality</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
